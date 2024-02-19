@@ -1,0 +1,342 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.contact .container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 175px 50px 100px 50px;
+  gap: 100px;
+}
+.contact .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact .container .content-header {
+  letter-spacing: 1px;
+}
+.contact .container .content-header h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-bottom: 16px;
+}
+.contact .container .content-header p {
+  font-size: 24px;
+  line-height: 32px;
+}
+.contact .container .content-contact {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 24px;
+}
+.contact .container .content-contact li {
+  width: 50%;
+  font-size: 16px;
+}
+.contact .container .content-contact li h3 {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--dark);
+  width: fit-content;
+  padding: 12px 24px 0px 24px;
+  border-radius: 24px 24px 0px 0px;
+  color: var(--orange);
+}
+.contact .container .content-contact li p {
+  width: 100%;
+  max-width: 260px;
+  min-width: 200px;
+  padding: 24px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 24px 24px 24px;
+  border: 8px solid var(--dark);
+}
+.contact .container .content-social h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  margin-bottom: 10px;
+}
+.contact .container .content-social ul {
+  display: flex;
+  gap: 16px;
+}
+.contact .container .content-social ul li {
+  width: 56px;
+  height: 56px;
+}
+.contact .container .content-social ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  padding-top: 2px;
+  font-size: 20px;
+  background-color: var(--dark);
+  border-radius: 50%;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+.contact .container .content-social ul li a:hover {
+  box-shadow: 0px 0px 0px 2px var(--orange);
+  background-color: var(--light-dark);
+  color: var(--orange);
+}
+.contact .container .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 480px;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--dark);
+  padding: 72px;
+  position: relative;
+  border-radius: 0px 24px 24px 24px;
+  box-shadow: 0px 0px 4px 2px rgba(var(--dark-rgb), 0.5);
+}
+.contact .container .form-title {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 24px;
+  padding: 16px 32px;
+  background-color: var(--dark);
+  color: var(--orange);
+  border-radius: 24px 24px 0px 0px;
+}
+.contact .container .form-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.contact .container .form-body .textarea, .contact .container .form-body .input {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  gap: 6px;
+}
+.contact .container .form-body .textarea label, .contact .container .form-body .input label {
+  font-size: 14px;
+  padding-left: 20px;
+}
+.contact .container .form-body .textarea input, .contact .container .form-body .textarea textarea, .contact .container .form-body .input input, .contact .container .form-body .input textarea {
+  border-radius: 16px;
+  background-color: var(--light-dark);
+  outline: none;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  font-size: 16px;
+  color: var(--light-gray);
+}
+.contact .container .form-body .textarea input, .contact .container .form-body .input input {
+  height: 56px;
+}
+.contact .container .form-body .textarea textarea, .contact .container .form-body .input textarea {
+  height: 112px;
+  resize: none;
+}
+.contact .container .form-button {
+  color: var(--dark);
+  background-color: var(--light-gray);
+  padding: 18px 32px 16px 32px;
+  border-radius: 32px;
+  transition: background-color 0.5s;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  margin-top: 16px;
+  font-size: 16px;
+  width: fit-content;
+}
+.contact .container .form-button:hover {
+  background-color: var(--orange);
+}
+
+@media (min-width: 901px) and (max-width: 1280px) {
+  .contact .container {
+    padding: 175px 50px 100px 50px;
+    gap: 40px;
+  }
+  .contact .container .content {
+    gap: 24px;
+  }
+  .contact .container .content-header {
+    text-align: center;
+  }
+  .contact .container .content-header h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .contact .container .content-header p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contact .container .content-contact {
+    gap: 10px;
+  }
+  .contact .container .content-contact li {
+    font-size: 14px;
+    width: auto;
+  }
+  .contact .container .content-contact li h3 {
+    font-size: 16px;
+    padding: 8px 16px 0px 16px;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .contact .container .content-contact li p {
+    width: 100%;
+    min-width: 200px;
+    padding: 12px;
+    font-size: 14px;
+    border: 4px solid var(--dark);
+  }
+  .contact .container .content-social {
+    display: block;
+  }
+  .contact .container .form {
+    padding: 48px 20px;
+    min-width: 420px;
+  }
+  .contact .container .form-title {
+    font-size: 18px;
+    padding: 12px 20px 0px 20;
+  }
+  .contact .container .form-button {
+    padding: 12px 20px 12px 20px;
+    letter-spacing: 0.75px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 769px) and (max-width: 900px) {
+  .contact .container {
+    padding: 175px 50px 100px 50px;
+    align-items: center;
+    gap: 40px;
+  }
+  .contact .container .content {
+    gap: 24px;
+  }
+  .contact .container .content-header {
+    text-align: center;
+  }
+  .contact .container .content-header h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .contact .container .content-header p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contact .container .content-contact {
+    gap: 10px;
+    justify-content: center;
+  }
+  .contact .container .content-contact li {
+    font-size: 14px;
+    width: auto;
+  }
+  .contact .container .content-contact li h3 {
+    font-size: 16px;
+    padding: 8px 16px 0px 16px;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .contact .container .content-contact li p {
+    width: 100%;
+    min-width: 250px;
+    padding: 12px;
+    font-size: 14px;
+    border: 4px solid var(--dark);
+  }
+  .contact .container .content-social {
+    display: none;
+  }
+  .contact .container .form {
+    padding: 48px 20px;
+    min-width: 420px;
+  }
+  .contact .container .form-title {
+    font-size: 18px;
+    padding: 12px 20px 0px 20;
+  }
+  .contact .container .form-button {
+    padding: 12px 20px 12px 20px;
+    letter-spacing: 0.75px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact .container {
+    padding: 150px 20px 100px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .container .content {
+    gap: 24px;
+  }
+  .contact .container .content-header {
+    text-align: center;
+  }
+  .contact .container .content-header h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .contact .container .content-header p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contact .container .content-contact {
+    gap: 10px;
+    justify-content: center;
+  }
+  .contact .container .content-contact li {
+    font-size: 14px;
+    width: auto;
+  }
+  .contact .container .content-contact li h3 {
+    font-size: 16px;
+    padding: 8px 16px 0px 16px;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .contact .container .content-contact li p {
+    width: 100%;
+    min-width: 250px;
+    padding: 12px;
+    font-size: 14px;
+    border: 4px solid var(--dark);
+  }
+  .contact .container .content-social {
+    display: none;
+  }
+  .contact .container .form {
+    padding: 48px 20px;
+  }
+  .contact .container .form-title {
+    font-size: 18px;
+    padding: 12px 20px 0px 20;
+  }
+  .contact .container .form-button {
+    padding: 12px 20px 12px 20px;
+    letter-spacing: 0.75px;
+    font-size: 14px;
+  }
+}

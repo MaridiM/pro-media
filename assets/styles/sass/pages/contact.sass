@@ -1,0 +1,300 @@
+.contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-grow: 1
+
+    .container
+        margin: auto
+        display: flex
+        justify-content: space-between
+        max-width: 1280px
+        width: 100%
+        min-height: 100vh
+        padding: 175px 50px 100px 50px
+        gap: 100px
+
+        // CONTENT
+        .content
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            
+            // HEADER
+            &-header
+                letter-spacing: 1px
+                h1
+                    font-size: 56px
+                    font-weight: 700
+                    line-height: 64px
+                    margin-bottom: 16px
+                p
+                    font-size: 24px
+                    line-height: 32px
+
+            // BODY
+            &-contact
+                display: flex
+                flex-wrap: wrap
+                width: 100%
+                row-gap: 24px
+                li
+                    width: 50%
+                    font-size: 16px
+                    h3
+                        font-size: 20px
+                        font-weight: 600
+                        background-color: var(--dark)
+                        width: fit-content
+                        padding: 12px 24px 0px 24px
+                        border-radius: 24px 24px 0px 0px
+                        color: var(--orange)
+                    p
+                        width: 100%
+                        max-width: 260px
+                        min-width: 200px
+                        padding: 24px
+                        gap: 8px
+                        display: flex
+                        flex-direction: column
+                        border-radius: 0px 24px 24px 24px
+                        border: 8px solid var(--dark)
+
+            // SOCIAL
+            &-social
+                h3
+                    font-size: 16px
+                    font-weight: 600
+                    letter-spacing: .75px
+                    margin-bottom: 10px
+                ul
+                    display: flex
+                    gap: 16px
+                    li
+                        width: 56px
+                        height: 56px
+                        a
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            background-color: green
+                            width: 100%
+                            height: 100%
+                            padding-top: 2px
+                            font-size: 20px
+                            background-color: var(--dark)
+                            border-radius: 50%
+                            transition: background-color .5s, color .5s, box-shadow .5s
+                            &:hover
+                                box-shadow: 0px 0px 0px 2px var(--orange)
+                                background-color: var(--light-dark)
+                                color: var(--orange)
+
+        // FORM
+        .form
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 30px
+            max-width: 480px
+            width: 100%
+            height: fit-content
+            background-color: var(--dark)
+            padding: 72px
+            position: relative
+            border-radius: 0px 24px 24px 24px
+            box-shadow: 0px 0px 4px 2px rgba(var(--dark-rgb), .5)
+            &-title
+                position: absolute
+                top: -40px
+                left: 0
+                font-size: 24px
+                padding: 16px 32px
+                background-color: var(--dark)
+                color: var(--orange)
+                border-radius: 24px 24px 0px 0px
+            &-body
+                display: flex
+                flex-direction: column
+                width: 100%
+                gap: 20px
+                .textarea, .input
+                    display: flex
+                    flex-direction: column
+                    overflow: hidden
+                    width: 100%
+                    gap: 6px
+                    label
+                        font-size: 14px
+                        padding-left: 20px
+                    input, textarea
+                        border-radius: 16px
+                        background-color: var(--light-dark)
+                        outline: none
+                        border: none
+                        padding: 20px
+                        width: 100%
+                        font-size: 16px
+                        color: var(--light-gray)
+
+                    input
+                        height: 56px
+                    textarea
+                        height: 112px
+                        resize: none
+            &-button
+                color: var(--dark)
+                background-color: var(--light-gray)
+                padding: 18px 32px 16px 32px
+                border-radius: 32px
+                transition: background-color .5s
+                font-weight: 600
+                letter-spacing: 1px
+                outline: none
+                border: none
+                margin-top: 16px
+                font-size: 16px
+                width: fit-content
+                &:hover
+                    background-color: var(--orange)
+
+@media (min-width: 901px) and (max-width: 1280px)
+    .contact
+        .container
+            padding: 175px 50px 100px 50px
+            gap: 40px
+
+            .content
+                gap: 24px
+
+                &-header
+                    text-align: center
+                    h1
+                        font-size: 32px
+                        line-height: 40px
+                    p
+                        font-size: 14px
+                        line-height: 20px
+                &-contact
+                    gap: 10px
+                    li
+                        font-size: 14px
+                        width: auto
+                        h3
+                            font-size: 16px
+                            padding: 8px 16px 0px 16px
+                            border-radius: 16px 16px 0px 0px
+                        p
+                            width: 100%
+                            min-width: 200px
+                            padding: 12px
+                            font-size: 14px
+                            border: 4px solid var(--dark)
+                &-social
+                    display: block
+            .form
+                padding: 48px 20px
+                min-width: 420px
+                &-title
+                    font-size: 18px
+                    padding: 12px 20px 0px 20
+                &-button
+                    padding: 12px 20px 12px 20px
+                    letter-spacing: .75px
+                    font-size: 14px
+
+@media (min-width: 769px) and (max-width: 900px)
+    .contact
+        .container
+            padding: 175px 50px 100px 50px
+            align-items: center
+            gap: 40px
+
+            .content
+                gap: 24px
+
+                &-header
+                    text-align: center
+                    h1
+                        font-size: 32px
+                        line-height: 40px
+                    p
+                        font-size: 14px
+                        line-height: 20px
+                &-contact
+                    gap: 10px
+                    justify-content: center
+                    li
+                        font-size: 14px
+                        width: auto
+                        h3
+                            font-size: 16px
+                            padding: 8px 16px 0px 16px
+                            border-radius: 16px 16px 0px 0px
+                        p
+                            width: 100%
+                            min-width: 250px
+                            padding: 12px
+                            font-size: 14px
+                            border: 4px solid var(--dark)
+                &-social
+                    display: none
+            .form
+                padding: 48px 20px
+                min-width: 420px
+                &-title
+                    font-size: 18px
+                    padding: 12px 20px 0px 20
+                &-button
+                    padding: 12px 20px 12px 20px
+                    letter-spacing: .75px
+                    font-size: 14px
+    
+            
+@media  (min-width: 320px) and (max-width: 768px)
+    .contact
+        .container
+            padding: 150px 20px 100px 20px
+            flex-direction: column
+            align-items: center
+
+            .content
+                gap: 24px
+
+                &-header
+                    text-align: center
+                    h1
+                        font-size: 32px
+                        line-height: 40px
+                    p
+                        font-size: 14px
+                        line-height: 20px
+                &-contact
+                    gap: 10px
+                    justify-content: center
+                    li
+                        font-size: 14px
+                        width: auto
+                        h3
+                            font-size: 16px
+                            padding: 8px 16px 0px 16px
+                            border-radius: 16px 16px 0px 0px
+                        p
+                            width: 100%
+                            min-width: 250px
+                            padding: 12px
+                            font-size: 14px
+                            border: 4px solid var(--dark)
+                &-social
+                    display: none
+            .form
+                padding: 48px 20px
+                &-title
+                    font-size: 18px
+                    padding: 12px 20px 0px 20
+                &-button
+                    padding: 12px 20px 12px 20px
+                    letter-spacing: .75px
+                    font-size: 14px
