@@ -89,6 +89,7 @@
 }
 .portfolio-list .item-description-blur {
   transition: opacity 0.5s;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -138,6 +139,7 @@
   justify-content: center;
   text-align: center;
   font-size: 16px;
+  opacity: 0;
   transition: opacity 0.5s;
 }
 .portfolio-list .item-description-body h2 {
