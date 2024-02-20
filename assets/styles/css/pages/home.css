@@ -1,41 +1,45 @@
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
 .home .s1 {
-  width: 100vw;
-  height: 100vh;
-  min-height: 900px;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-bottom: 4px solid rgba(0, 0, 0, 0.15);
-  z-index: 0;
 }
 .home .s1 video {
-  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 .home .s1-blur {
   position: absolute;
   background-color: rgba(var(--dark-rgb), 0.3);
   width: 100%;
   height: 100%;
-  z-index: 200;
+  z-index: 1;
 }
 .home .s1-container {
-  max-width: 1280px;
+  padding: 175px 50px;
   width: 100%;
-  position: absolute;
-  top: 200px;
-  margin: 0 auto;
-  z-index: 300;
-  padding: 0px 50px;
+  max-width: 1280px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
   display: flex;
+  justify-content: center;
+  align-items: start;
   flex-direction: column;
   gap: 50px;
 }
@@ -84,6 +88,7 @@
 .home .s2-container {
   max-width: 1280px;
   width: 100%;
+  margin: 0 auto;
 }
 .home .s2-title {
   display: flex;
@@ -98,28 +103,31 @@
 }
 .home .s2-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   padding: 30px;
   background-color: var(--dark);
-  border-radius: 0px 24px 24px;
+  border-radius: 0px 32px 32px;
   box-shadow: 0px 0px 4px 2px var(--dark);
 }
-.home .s2-gallery li {
-  max-width: 425px;
-  min-height: 240px;
-  background: #000;
+.home .s2-gallery .item {
   position: relative;
+  padding: 0px 0px 56.25% 0px;
   overflow: hidden;
   border-radius: 24px;
   box-shadow: 0px 0px 4px 2px var(--dark);
-  transition: box-shadow 0.5s ease-in-out;
-  display: flex;
+  opacity: 0.75;
+  transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-.home .s2-gallery li:hover {
-  box-shadow: 0px 0px 0px 1px var(--orange), 0px 0px 4px 2px var(--dark);
+.home .s2-gallery .item:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 0px 2px var(--orange), 0px 0px 4px 2px var(--dark);
 }
-.home .s2-gallery li iframe {
+.home .s2-gallery .item iframe {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -128,7 +136,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 100px;
+  padding: 50px 100px 100px 100px;
 }
 .home .s3-container {
   max-width: 1280px;
@@ -150,28 +158,32 @@
 .home .s3-list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 100px;
 }
 .home .s3-item {
   display: flex;
   justify-content: center;
   gap: 50px;
-  min-height: 300px;
 }
 .home .s3-item:nth-child(2) {
   flex-direction: row-reverse;
 }
 .home .s3-item-video {
-  max-width: 640px;
   width: 100%;
-  max-height: 348px;
-  background: var(--dark);
+  height: fit-content;
+  position: relative;
+  aspect-ratio: 16/9;
   overflow: hidden;
-  box-shadow: 0px 0px 4px 2px var(--dark);
   border-radius: 24px;
-  display: contents;
+  box-shadow: 0px 0px 4px 2px var(--dark);
+  opacity: 0.75;
+  transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .home .s3-item-video iframe {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -355,19 +367,6 @@
     font-size: 18px;
     line-height: 24px;
   }
-  .home .s2-gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .home .s2-gallery li {
-    display: contents;
-  }
-  .home .s2-gallery li:hover {
-    box-shadow: none;
-  }
-  .home .s3 {
-    padding: 50px;
-  }
   .home .s3-container {
     align-items: center;
     gap: 50px;
@@ -446,37 +445,26 @@
     letter-spacing: 0.75px;
     font-size: 14px;
   }
-  .home .s2 {
-    padding: 50px;
-  }
   .home .s2-title {
     font-size: 18px;
     line-height: 24px;
   }
   .home .s2-gallery {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .home .s2-gallery li {
-    justify-self: center;
-    box-shadow: none;
-    min-height: auto;
-    width: fit-content;
-    padding: 10px;
-    display: contents;
-  }
-  .home .s2-gallery li:hover {
-    box-shadow: none;
   }
   .home .s3 {
     padding: 50px;
   }
   .home .s3-container {
     align-items: center;
+    gap: 40px;
   }
   .home .s3-title {
     font-size: 18px;
     line-height: 24px;
+  }
+  .home .s3-list {
+    gap: 60px;
   }
   .home .s3-item {
     flex-direction: column;
@@ -486,10 +474,9 @@
     flex-direction: column;
   }
   .home .s3-item-video {
-    width: fit-content;
+    max-width: 400px;
   }
   .home .s3-item-body {
-    padding: 0px 20px;
     align-items: center;
     text-align: center;
   }
@@ -571,25 +558,15 @@
     line-height: 24px;
   }
   .home .s2-gallery {
+    padding: 20px 15px 15px 15px;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .home .s2-gallery li {
-    justify-self: center;
-    box-shadow: none;
-    min-height: auto;
-    width: fit-content;
-    padding: 10px;
-    display: contents;
-  }
-  .home .s2-gallery li:hover {
-    box-shadow: none;
   }
   .home .s3 {
     padding: 50px 20px;
   }
   .home .s3-container {
     align-items: center;
+    gap: 40px;
   }
   .home .s3-title {
     font-size: 18px;
@@ -602,8 +579,10 @@
   .home .s3-item:nth-child(2) {
     flex-direction: column;
   }
+  .home .s3-item-video {
+    max-width: 280px;
+  }
   .home .s3-item-body {
-    padding: 0px 20px;
     align-items: center;
     text-align: center;
   }
@@ -611,12 +590,13 @@
     font-size: 24px;
   }
   .home .s3-item-body p {
-    font-size: 16px;
+    font-size: 14px;
+    font-width: 400;
   }
   .home .s3-item-buttom {
     margin: auto;
     padding: 14px 20px 12px 20px;
-    font-dize: 16px;
+    font-dize: 14px;
     letter-spacing: 0.75px;
   }
   .home .s4 {
@@ -639,8 +619,8 @@
     width: 100%;
   }
   .home .s4 .splide__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     margin: 10px 0 0 20px;
   }
   .home .s4 .splide__track {

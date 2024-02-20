@@ -17,7 +17,6 @@ const splide = checkSplide && new Splide( '.splide', {
 
 
 const burger = document.querySelector('.burger')
-console.log(burger)
 
 burger.addEventListener('click', () => {
     const header = document.querySelector('.header')
